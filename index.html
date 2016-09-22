@@ -69,9 +69,9 @@
                                 <a href="#Angular2">Angular2</a>
                                 <ul class="nav nav-stacked">
                                     <li><a href="#Angular2Sub1">Quickinstall</a></li>
+                                    <li><a href="#Angular2Sub4">UI Framework</a></li>
                                     <li><a href="#Angular2Sub2">Debug</a></li>
                                     <li><a href="#Angular2Sub3">Markdown</a></li>
-                                    <li><a href="#Angular2Sub4">UI Framework</a></li>
                                     <li><a href="#Angular2Sub5">Routes</a></li>
                                     <li><a href="#Angular2Sub6">Link</a></li>
                                 </ul>
@@ -136,18 +136,87 @@
 
 
                     <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                        <div class="alert alert-warning" role="alert">This is a working in progress</div>
                         <section id="Angular2" class="group">
-                            <h3>Angular2</h3>
+                            <h1>Angular2</h1>
                             <div id="Angular2Sub1" class="subgroup">
-                                <h4>Quickinstall</h4>
-                                npm upgrade: <a href="https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#command-line-console-and-other-useful-tools">https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#command-line-console-and-other-useful-tools</a><br />
+                                <h2>Quickinstall</h2>
+                                <p>
+                                    Just follow the official quickstart guide from angular team <a href="https://angular.io/docs/ts/latest/quickstart.html">here</a> 
+                                    and pratice a bit with their tutorial <a href="https://angular.io/docs/ts/latest/tutorial/">"Tour of Heroes"</a>.
+                                    <em>Read and follow</em> the <a href="https://angular.io/docs/ts/latest/guide/style-guide.html">"style guide"</a>.
+                                </p>
+                                <p>
+                                    After that, you can download the quickstart template for a real application from <a href="https://github.com/dantesguilherme/angular2-quickstart-decouple">here</a> 
+                                    or start your own from scratch.
+                                </p>
+                                <h3>Tips</h3>
+                                <p>
+                                    You can may find some problems or need to dig a bit to get things done. Here I give you some fast refs to solve the most commom problems.
+                                </p>
+                                <ul>
+                                    <li>upgrade npm to 3.*: <code>(sudo) npm i -g npm@3</code></li>
+                                    <li>Run <code>npm prune</code> to unbuild modules not listed in package.json - <a href="http://stackoverflow.com/questions/21417014/npm-command-to-uninstall-unused-packages-in-node-js">thanks</a></li>
+                                    <li><code>npm i -g lite-server</code> then <code>lite-server</code> inside <code>docs</code>
+                                </ul>
+                                <p>
+                                    If you're still facing some problems and you are using windows. This help from Microsoft may come in hand: <a href="https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#command-line-console-and-other-useful-tools">Microsoft</a><br />
+                                    <blockquote>
+                                    npm upgrade: 
+                                    <br />
                                 <pre>
 powershell - run as administrator
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 npm install npm-windows-upgrade -g
 npm-windows-upgrade</pre>
-<a href="http://asp.net-hacker.rocks/2016/08/08/setup-angular2-typescript-aspnetcore-in-visualstudio.html">http://asp.net-hacker.rocks/2016/08/08/setup-angular2-typescript-aspnetcore-in-visualstudio.html</a>
+<footer>Fast reference from <cite title="Microsoft">Microsoft</cite></footer>
+                                    </blockquote>
+                                </p>
 
+<!-- TODO: Angular2 with Visual Studio
+    //<a href="http://asp.net-hacker.rocks/2016/08/08/setup-angular2-typescript-aspnetcore-in-visualstudio.html">http://asp.net-hacker.rocks/2016/08/08/setup-angular2-typescript-aspnetcore-in-visualstudio.html</a>
+-->
+
+                            </div>
+                            <div id="Angular2Sub4" class="subgroup">
+                                <h2>UI Framework</h2>
+                                <p>
+                                    Now that you have an working environment you probably wants an UI Framework to go ahead with your project. 
+                                    Bellow has a list of some UI Framework. 
+                                    Analyse each one of them and see what fits best for your project.
+                                </p>
+                                <ul>
+                                    <li>Bootstrap
+                                        <ul>
+                                            <li><a href="http://valor-software.com/ng2-bootstrap/#/">ng2-bootstrap</a> - Bootstrap 3 & 4</li>
+                                            <li><a href="https://github.com/ng-bootstrap/ng-bootstrap">ng-bootstrap</a> - Bootstrap 4 (ui-bootstrap team)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Material
+                                        <ul>
+                                            <li><a href="https://github.com/angular/material2">Material2</a> - Angular team's Material Design</li>
+                                        </ul>
+                                    </li>
+                                    <li>Others
+                                        <ul>
+                                            <li><a href="https://onsen.io/v2/angular2.html">https://onsen.io/v2/angular2.html</a></li>
+                                            <li><a href="http://www.primefaces.org/primeng/#/">http://www.primefaces.org/primeng/#/</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p>
+                                    This option is specific to each project. I'll choose ng2-bootstrap considering it has support to bootstrap 3 but you can choose what fits best for you. Bootstrap 4 is still in alpha, that means it's not for production but we want something for production, so we start with bootstrap 3 and change to 4 when it's safe.  
+                                </p>
+                                <p>
+                                    To work with bootstrap in angular, you don't use jquery and bootstrap javascript <small>(it's possible)</small>. You follow the installation instructions from the choosen template, in this case <a href="http://valor-software.com/ng2-bootstrap/#/">this one</a>. 
+                                </p>
+                                <ul>
+                                    <li>Install package</li>
+                                    <li>update gulp/index.html *don't forget dependencies</li>
+                                </ul>
+                                <p>
+                                    Now you are ready to go forward.
+                                </p>
                             </div>
                             <div id="Angular2Sub2" class="subgroup">
                                 <h4>Debug</h4>
@@ -157,15 +226,7 @@ npm-windows-upgrade</pre>
                                 <h4>Markdown</h4>
                                 <a href="http://angular-markdown-text.nullest.com/#!/">http://angular-markdown-text.nullest.com/#!/</a>
                             </div>
-                            <div id="Angular2Sub4" class="subgroup">
-                                <h4>UI Framework</h4>
-                                <ul>
-                                    <li><a href="https://onsen.io/v2/angular2.html">https://onsen.io/v2/angular2.html</a></li>
-                                    <li><a href="http://www.primefaces.org/primeng/#/">http://www.primefaces.org/primeng/#/</a></li>
-                                    <li><a href="http://valor-software.com/ng2-bootstrap/#/">http://valor-software.com/ng2-bootstrap/#/</a></li>
-                                    <li><a href="https://github.com/angular/material2">https://github.com/angular/material2</a></li>
-                                </ul>
-                            </div>
+                            
                             <div id="Angular2Sub5" class="subgroup">
                                 <h4>Routes</h4>
                                 <a href="https://www.angular-meteor.com/tutorials/socially/angular2/routing-and-multiple-views">https://www.angular-meteor.com/tutorials/socially/angular2/routing-and-multiple-views</a>
